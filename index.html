@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterGlobe.cloud - Global Shipping & Tracking</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <!-- HEADER / NAVIGATION -->
+    <header class="header">
+        <div class="header-top">
+            <div class="header-container">
+                <div class="logo">
+                    <span class="logo-icon">🌐</span>
+                    <span class="logo-text">InterGlobe</span>
+                    <span class="logo-sub">.cloud</span>
+                </div>
+                
+                <nav class="main-nav">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#tracking" class="nav-link">Track Shipment</a>
+                    <a href="#courier" class="nav-link">Send Shipment</a>
+                    <a href="#about" class="nav-link">About Us</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+
+                <div class="header-actions">
+                    <select class="language-selector" id="langSelector">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                    <button class="btn-login">Sign In</button>
+                </div>
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION WITH TRACKING -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-shape hero-shape-1"></div>
+            <div class="hero-shape hero-shape-2"></div>
+            <div class="hero-shape hero-shape-3"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Global Shipping Redefined</h1>
+                <p class="hero-subtitle">Reliable, Fast, and Transparent Courier Services Across 200+ Countries</p>
+            </div>
+
+            <!-- TRACKING SECTION - PROMINENT POSITION -->
+            <div class="tracking-module">
+                <div class="tracking-header">
+                    <h2>Track Your Shipment</h2>
+                    <p>Enter your tracking code to get real-time updates</p>
+                </div>
+
+                <div class="tracking-form">
+                    <div class="tracking-input-group">
+                        <label for="trackingCode" class="tracking-label">
+                            <span class="label-icon">📦</span>
+                            Tracking Number
+                        </label>
+                        <input 
+                            type="text" 
+                            id="trackingCode" 
+                            placeholder="e.g., IG2024001234567"
+                            class="tracking-input"
+                        >
+                        <button class="btn-track">Track Now</button>
+                    </div>
+
+                    <div class="tracking-additional">
+                        <label class="tracking-checkbox">
+                            <input type="checkbox" id="emailNotif">
+                            <span>Email me updates</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="tracking-help">
+                    <a href="#" class="help-link">Don't have a tracking number? <span>→</span></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- AUDIO ELEMENT - Background Voice -->
+        <div class="audio-container">
+            <button class="audio-toggle" id="audioToggle" title="Play reliability message">
+                <span class="audio-icon">🔊</span>
+            </button>
+            <audio id="voiceAudio" preload="none">
+                <source src="assets/audio/reliability-message.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </section>
+
+    <!-- SERVICES OVERVIEW - PREMIUM CARDS -->
+    <section id="services" class="services">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <p>Comprehensive shipping solutions tailored to your needs</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- Air Freight -->
+            <div class="service-card service-card-air">
+                <div class="card-shape card-shape-top"></div>
+                <div class="card-image">
+                    <svg viewBox="0 0 100 100" class="service-icon">
+                        <path d="M50 10 L80 50 L60 50 L75 85 L50 75 L25 85 L40 50 L20 50 Z" fill="url(#gradAir)" stroke="none"/>
+                        <defs>
+                            <linearGradient id="gradAir" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#F7931E;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h3>Air Freight</h3>
+                <p>Lightning-fast delivery via commercial aircraft. Perfect for time-sensitive shipments across continents.</p>
+                <a href="#" class="card-link">Learn More →</a>
+                <div class="card-shape card-shape-bottom"></div>
+            </div>
+
+            <!-- Ocean Shipping -->
+            <div class="service-card service-card-ocean">
+                <div class="card-shape card-shape-top"></div>
+                <div class="card-image">
+                    <svg viewBox="0 0 100 100" class="service-icon">
+                        <path d="M20 40 Q50 20 80 40 L75 75 Q50 85 25 75 Z" fill="url(#gradOcean)" stroke="none"/>
+                        <circle cx="35" cy="35" r="3" fill="rgba(255,255,255,0.8)"/>
+                        <circle cx="65" cy="30" r="2" fill="rgba(255,255,255,0.6)"/>
+                        <defs>
+                            <linearGradient id="gradOcean" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#004499;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h3>Ocean Shipping</h3>
+                <p>Cost-effective maritime solutions for bulk shipments. Reliable container and breakbulk services worldwide.</p>
+                <a href="#" class="card-link">Learn More →</a>
+                <div class="card-shape card-shape-bottom"></div>
+            </div>
+
+            <!-- Ground Delivery -->
+            <div class="service-card service-card-ground">
+                <div class="card-shape card-shape-top"></div>
+                <div class="card-image">
+                    <svg viewBox="0 0 100 100" class="service-icon">
+                        <rect x="30" y="35" width="40" height="30" fill="url(#gradGround)" rx="3"/>
+                        <circle cx="40" cy="70" r="6" fill="rgba(0,0,0,0.2)"/>
+                        <circle cx="60" cy="70" r="6" fill="rgba(0,0,0,0.2)"/>
+                        <defs>
+                            <linearGradient id="gradGround" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00AA44;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#006622;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h3>Ground Delivery</h3>
+                <p>Economical land transport with guaranteed on-time delivery. Ideal for regional and national shipments.</p>
+                <a href="#" class="card-link">Learn More →</a>
+                <div class="card-shape card-shape-bottom"></div>
+            </div>
+
+            <!-- Customs Clearance -->
+            <div class="service-card service-card-customs">
+                <div class="card-shape card-shape-top"></div>
+                <div class="card-image">
+                    <svg viewBox="0 0 100 100" class="service-icon">
+                        <rect x="25" y="25" width="50" height="50" fill="none" stroke="url(#gradCustoms)" stroke-width="3"/>
+                        <path d="M40 50 L50 60 L65 45" fill="none" stroke="url(#gradCustoms)" stroke-width="2" stroke-linecap="round"/>
+                        <defs>
+                            <linearGradient id="gradCustoms" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#9933CC;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#6600AA;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h3>Customs Clearance</h3>
+                <p>Expert handling of international documentation and regulatory compliance. Seamless border crossings.</p>
+                <a href="#" class="card-link">Learn More →</a>
+                <div class="card-shape card-shape-bottom"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATISTICS SECTION -->
+    <section id="stats" class="statistics">
+        <div class="stats-background">
+            <div class="stat-shape stat-shape-1"></div>
+            <div class="stat-shape stat-shape-2"></div>
+        </div>
+
+        <div class="stats-content">
+            <div class="stat-item">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">Countries Served</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50M+</div>
+                <div class="stat-label">Shipments Annually</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">99.7%</div>
+                <div class="stat-label">On-Time Delivery</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Customer Support</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section id="features" class="features">
+        <div class="section-header">
+            <h2>Why Choose InterGlobe.cloud</h2>
+            <p>Industry-leading reliability with cutting-edge technology</p>
+        </div>
+
+        <div class="features-container">
+            <!-- Feature 1 -->
+            <div class="feature-item feature-left">
+                <div class="feature-content">
+                    <h3>Real-Time Tracking</h3>
+                    <p>Monitor your shipment at every step of its journey with GPS-enabled real-time updates. Know exactly where your cargo is, 24/7.</p>
+                    <ul class="feature-list">
+                        <li>Live GPS tracking</li>
+                        <li>Instant notifications</li>
+                        <li>Delivery ETA</li>
+                    </ul>
+                </div>
+                <div class="feature-image">
+                    <div class="image-placeholder tracking-visual">
+                        <svg viewBox="0 0 300 300">
+                            <circle cx="150" cy="150" r="100" fill="rgba(0,102,204,0.1)" stroke="#0066CC" stroke-width="2"/>
+                            <circle cx="150" cy="150" r="70" fill="rgba(0,102,204,0.15)" stroke="#0066CC" stroke-width="2"/>
+                            <circle cx="150" cy="150" r="8" fill="#0066CC"/>
+                            <text x="150" y="280" text-anchor="middle" font-size="14" fill="#333">Live Position Tracking</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-item feature-right">
+                <div class="feature-image">
+                    <div class="image-placeholder security-visual">
+                        <svg viewBox="0 0 300 300">
+                            <path d="M150 30 L220 60 L220 140 Q150 200 150 200 Q80 140 80 140 L80 60 Z" fill="rgba(153,51,204,0.1)" stroke="#9933CC" stroke-width="2"/>
+                            <path d="M120 140 L140 160 L180 120" fill="none" stroke="#9933CC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <text x="150" y="280" text-anchor="middle" font-size="14" fill="#333">End-to-End Security</text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="feature-content">
+                    <h3>Advanced Security</h3>
+                    <p>Your shipments are protected with military-grade encryption and insurance coverage. We prioritize your cargo's safety and your data privacy.</p>
+                    <ul class="feature-list">
+                        <li>Full insurance coverage</li>
+                        <li>Encrypted data transmission</li>
+                        <li>Verified handlers</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-item feature-left">
+                <div class="feature-content">
+                    <h3>Smart Routing</h3>
+                    <p>Our AI-powered logistics network automatically optimizes routes for speed and cost efficiency. Reduce delivery times while minimizing environmental impact.</p>
+                    <ul class="feature-list">
+                        <li>AI route optimization</li>
+                        <li>Lowest carbon footprint</li>
+                        <li>Fastest delivery times</li>
+                    </ul>
+                </div>
+                <div class="feature-image">
+                    <div class="image-placeholder routing-visual">
+                        <svg viewBox="0 0 300 300">
+                            <path d="M50 150 Q100 100 150 80 T250 150" fill="none" stroke="#FF6B35" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="50" cy="150" r="6" fill="#FF6B35"/>
+                            <circle cx="250" cy="150" r="6" fill="#FF6B35"/>
+                            <text x="150" y="280" text-anchor="middle" font-size="14" fill="#333">Optimized Routes</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COURIER BOOKING SECTION -->
+    <section id="courier" class="courier-section">
+        <div class="section-header">
+            <h2>Send Your Shipment</h2>
+            <p>Quick and easy booking process in just a few steps</p>
+        </div>
+
+        <div class="courier-form-preview">
+            <div class="form-section-group">
+                <!-- Section 1: Origin -->
+                <div class="form-section">
+                    <div class="section-header-inline">
+                        <span class="section-icon">📍</span>
+                        <h3>Origin Details</h3>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="originCity">City</label>
+                            <input type="text" id="originCity" placeholder="Enter city">
+                        </div>
+                        <div class="form-group">
+                            <label for="originCountry">Country</label>
+                            <input type="text" id="originCountry" placeholder="Select country">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <label for="originAddress">Address</label>
+                            <input type="text" id="originAddress" placeholder="Street address">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Destination -->
+                <div class="form-section">
+                    <div class="section-header-inline">
+                        <span class="section-icon">🎯</span>
+                        <h3>Destination Details</h3>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="destCity">City</label>
+                            <input type="text" id="destCity" placeholder="Enter city">
+                        </div>
+                        <div class="form-group">
+                            <label for="destCountry">Country</label>
+                            <input type="text" id="destCountry" placeholder="Select country">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <label for="destAddress">Address</label>
+                            <input type="text" id="destAddress" placeholder="Street address">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Shipment Details -->
+                <div class="form-section">
+                    <div class="section-header-inline">
+                        <span class="section-icon">📦</span>
+                        <h3>Shipment Details</h3>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="weight">Weight (kg)</label>
+                            <input type="number" id="weight" placeholder="0.00">
+                        </div>
+                        <div class="form-group">
+                            <label for="dimensions">Dimensions (L×W×H cm)</label>
+                            <input type="text" id="dimensions" placeholder="30×20×15">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="serviceType">Service Type</label>
+                            <select id="serviceType">
+                                <option>Standard Delivery</option>
+                                <option>Express (24-48h)</option>
+                                <option>Priority (Next Day)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="declaredValue">Declared Value (USD)</label>
+                            <input type="number" id="declaredValue" placeholder="0.00">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4: Contact Info -->
+                <div class="form-section">
+                    <div class="section-header-inline">
+                        <span class="section-icon">👤</span>
+                        <h3>Contact Information</h3>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="senderName">Your Name</label>
+                            <input type="text" id="senderName" placeholder="Full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="senderEmail">Email</label>
+                            <input type="email" id="senderEmail" placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <label for="senderPhone">Phone Number</label>
+                            <input type="tel" id="senderPhone" placeholder="+1 (555) 000-0000">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submission -->
+                <div class="form-section form-submit">
+                    <div class="submit-info">
+                        <p class="price-estimate">Estimated Cost: <strong>$45.99</strong></p>
+                        <p class="delivery-estimate">Estimated Delivery: 5-7 business days</p>
+                    </div>
+                    <button class="btn-submit">Create Waybill & Proceed to Payment</button>
+                    <p class="terms-notice">By submitting, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Page -->
+    <section id="about" class="page-section about-page">
+        <div class="section-header">
+            <h2>About InterGlobe.cloud</h2>
+            <p>Leading the future of global logistics</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Our Mission</h3>
+                <p>InterGlobe.cloud is dedicated to transforming global shipping by providing transparent, reliable, and innovative logistics solutions. We connect businesses across the world with seamless, real-time tracking and premium customer service.</p>
+                <h3>Our Values</h3>
+                <ul>
+                    <li><strong>Reliability:</strong> On-time delivery, every time</li>
+                    <li><strong>Transparency:</strong> Complete visibility into your shipment</li>
+                    <li><strong>Innovation:</strong> Cutting-edge technology for better logistics</li>
+                    <li><strong>Sustainability:</strong> Committed to reducing carbon footprint</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Page -->
+    <section id="contact" class="page-section contact-page">
+        <div class="section-header">
+            <h2>Contact Us</h2>
+            <p>We're here to help 24/7</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-form">
+                <form>
+                    <div class="form-group full">
+                        <label for="contactName">Name</label>
+                        <input type="text" id="contactName" placeholder="Your name">
+                    </div>
+                    <div class="form-group full">
+                        <label for="contactEmail">Email</label>
+                        <input type="email" id="contactEmail" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group full">
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" rows="5" placeholder="How can we help?"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms & Policy Page -->
+    <section id="terms" class="page-section terms-page">
+        <div class="section-header">
+            <h2>Terms & Policy</h2>
+            <p>Our commitment to your rights and privacy</p>
+        </div>
+        <div class="terms-content">
+            <h3>Terms of Service</h3>
+            <p>By using InterGlobe.cloud, you agree to our terms and conditions. We reserve the right to modify these terms at any time.</p>
+            <h3>Privacy Policy</h3>
+            <p>Your privacy is important to us. We collect and process your data in accordance with international privacy regulations including GDPR.</p>
+        </div>
+    </section>
+
+    <!-- Reviews Page -->
+    <section id="reviews" class="page-section reviews-page">
+        <div class="section-header">
+            <h2>Customer Reviews</h2>
+            <p>Trusted by businesses worldwide</p>
+        </div>
+        <div class="reviews-content">
+            <div class="review-item">
+                <div class="review-rating">★★★★★</div>
+                <p class="review-text">Outstanding service and reliability.</p>
+                <p class="review-author">- John Smith, Global Trader</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#tracking">Track</a></li>
+                    <li><a href="#courier">Ship</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#terms">Terms & Policy</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 InterGlobe.cloud. All rights reserved. | <a href="#">Privacy</a> | <a href="#">Terms</a></p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
